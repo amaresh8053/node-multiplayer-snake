@@ -9,6 +9,10 @@ node ('ubuntu-app-agent'){
         /* Let's make sure we have the repository cloned to our workspace */
        sh 'echo working'
     }  
+     stage('3nd stage') {
+        /* Let's make sure we have the repository cloned to our workspace */
+       sh 'echo working'
+    } 
    
  
 }
