@@ -13,7 +13,7 @@ node ('ubuntu-app-agent'){
     
     stage('Post-to-dockerhub') {
 		/* This Pushes the image to image registry. */
-       docker.withRegistry('https://registry.hub.docker.com/repository/docker/amreshpattnaik6/snake','docker-auth') {
+       docker.withRegistry('https://registry-1.docker.io/v2/','docker-auth') {
              app.push("latest")
        }
     }
