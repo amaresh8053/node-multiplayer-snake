@@ -8,12 +8,12 @@ node ('ubuntu-app-agent'){
     stage('Build-and-tag') {
         /* This builds the actual image */
        sh 'echo ###Building docker image from source###'
-        app= docker.build("amareshpattnaik6/snake")
+        app= docker.build("amreshpattnaik6/snake")
     } 
     
     stage('Post-to-dockerhub') {
 		/* This Pushes the image to image registry. */
-       docker.withRegistry('https://hub.docker.com/repository/docker','docker-auth') {
+       docker.withRegistry('https://registry.hub.docker.com','docker-auth') {
              app.push("latest")
        }
     }
