@@ -12,7 +12,7 @@ node ('ubuntu-app-agent'){
     stage('Build-and-tag') {
         /* This builds the actual image */
        sh 'echo ###Building docker image from source###'
-        app= docker.build("amareshpattnaik6/snake")
+        app= docker.build("amreshpattnaik6/snake")
     } 
     
     stage('Post-to-dockerhub') {
